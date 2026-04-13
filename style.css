@@ -32,24 +32,24 @@ h3 {
     height: auto !important;
     min-height: 0 !important;
     display: block !important;
-    text-align: left; /* Garante o alinhamento à esquerda */
+    text-align: left;
   }
 
   #inicio .container {
     z-index: 20;
     position: relative;
-    display: block; /* Remove o flex centralizador */
+    display: block;
   }
 
   #inicio .flex-wrap {
     flex-direction: column;
     display: flex;
     gap: 12px;
-    align-items: flex-start; /* Alinha os botões à esquerda */
+    align-items: flex-start;
   }
 
   #inicio a {
-    width: fit-content; /* O botão só ocupa o espaço do texto */
+    width: fit-content;
     display: inline-block;
     padding-left: 25px;
     padding-right: 25px;
