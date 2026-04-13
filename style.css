@@ -16,6 +16,12 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Classe para o JavaScript marcar o link ativo */
+.active-link {
+  color: var(--brand-yellow) !important;
+  border-bottom: 2px solid var(--brand-yellow);
+}
+
 .hero-overlay {
   background: linear-gradient(
     90deg,
@@ -24,35 +30,52 @@ h3 {
   );
 }
 
-/* --- AJUSTE PARA O BOTÕES APARECEREM NO CELULAR --- */
+
 @media (max-width: 768px) {
+
+  nav .container {
+    flex-direction: column !important;
+    padding: 10px 0 !important;
+    gap: 10px;
+  }
+
+  nav .flex {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 !important;
+  }
+
+  nav .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0 !important;
+  }
+
+  nav a {
+    font-size: 11px !important;
+    padding: 4px 2px;
+  }
+
+  .active-link {
+    border-bottom: none !important;
+    font-weight: 800;
+  }
+
   #inicio {
-    padding-top: 100px !important;
+    padding-top: 110px !important;
     padding-bottom: 40px !important;
     height: auto !important;
     min-height: 0 !important;
     display: block !important;
-    text-align: left;
-  }
-
-  #inicio .container {
-    z-index: 20;
-    position: relative;
-    display: block;
   }
 
   #inicio .flex-wrap {
     flex-direction: column;
-    display: flex;
-    gap: 12px;
     align-items: flex-start;
+    gap: 12px;
   }
 
   #inicio a {
     width: fit-content;
-    display: inline-block;
-    padding-left: 25px;
-    padding-right: 25px;
-    text-align: center;
+    padding: 12px 25px;
   }
 }
